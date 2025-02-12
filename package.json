@@ -2,9 +2,11 @@
   "name": "backend",
   "module": "server.ts",
   "type": "module",
-  "scripts": {
-    "start": "nodemon --exec bun server.ts"
-  },
+ "scripts": {
+  "dev": "nodemon --exec bun server.ts",
+  "build": "bun run tsc",
+  "start": "bun server.ts"
+},
   "devDependencies": {
     "@types/bun": "latest",
     "nodemon": "^3.1.9",
