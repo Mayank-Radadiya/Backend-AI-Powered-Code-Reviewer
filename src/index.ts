@@ -4,7 +4,13 @@ import cors from "cors";
 
 export const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://x-ai-code-review.vercel.app/",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
 app.use(express.json());
 
