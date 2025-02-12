@@ -1,5 +1,5 @@
 import express from "express";
-import { getCodeReview } from "../utils/gemini";
+import { getCodeReview } from "../utils/gemini.ts";
 
 export const router = express.Router();
 
