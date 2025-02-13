@@ -13,8 +13,7 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
-
-    // Best practices
+    "outDir": "dist",
     "strict": true,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
