@@ -6,7 +6,7 @@ export const app = express();
 
 app.use(
   cors({
-    origin: "https://x-ai-code-review.vercel.app",
+    origin: ["https://x-ai-code-review.vercel.app", "http://localhost:5173"],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
