@@ -7,9 +7,10 @@ if (!apiKey) {
 }
 
 const genAI = new GoogleGenerativeAI(apiKey);
+
 const model = genAI.getGenerativeModel({
   model: "gemini-2.0-flash",
-   systemInstruction: `
+  systemInstruction: `
                 Here’s a solid system instruction for your AI code reviewer:
 
                 AI System Instruction: Senior Code Reviewer (7+ Years of Experience)
@@ -85,11 +86,12 @@ const model = genAI.getGenerativeModel({
     `,
 });
 
-export async function generateContent(prompt: string) {
+async function generateContent(prompt: string) {
   const result = await model.generateContent(prompt);
 
   return result.response.text();
 }
+
 
 export async function getCodeReview(req: Request, res: Response) {
   try {

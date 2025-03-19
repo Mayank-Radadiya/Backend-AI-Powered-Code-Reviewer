@@ -1,17 +1,17 @@
 import express from "express";
 import { router } from "./router/ai.router.ts";
 import cors from "cors";
+import connectDB from "./db/index.ts";
 
 export const app = express();
-
+connectDB();
 app.use(
   cors({
-    origin: ["https://x-ai-code-review.vercel.app", "http://localhost:5173"],
+    origin: ["http://localhost:5173"],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
 );
-app.options("*", cors());
 
 app.use(express.json());
 
